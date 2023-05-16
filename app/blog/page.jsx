@@ -3,10 +3,6 @@ import Link from "next/link";
 import PostSidebar from "@/components/post/PostSidebar";
 import { useState, useEffect } from 'react';
 
-export const metadata = {
-    title: 'Blog Page',
-    description: 'App Blog Page',
-}
 const Blog = () => {
         // basic variables
     const [posts, setPosts] = useState('empty');
