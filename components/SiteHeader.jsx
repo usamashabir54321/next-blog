@@ -97,7 +97,7 @@ const SiteHeader = () => {
                                     </ul>
                                 </li>
                                 <li id="menu-item-1149" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1149">
-                                    <a href="https://kidsplanet.ancorathemes.com/#" className="sf-with-ul">خصوصیات</a>
+                                    <Link href="/magazines" className="sf-with-ul">شمارے</Link>
                                     <ul className="sub-menu fadeOutDown animated fast" style={{ display: 'none' }}>
                                     <li id="menu-item-49" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-49"><a href="https://kidsplanet.ancorathemes.com/typography/">نوع ٹائپ</a></li>
                                     <li id="menu-item-180" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-180"><a href="https://kidsplanet.ancorathemes.com/shortcodes/">Shortcodes</a></li>

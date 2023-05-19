@@ -66,3 +66,23 @@ aside#themerex_widget_socials-3 .logo_descr {
 ul#menu_user {
     margin-left: 30px;
 }
+.py-5{padding: 5rem 0;}
+.magazine-details-div {
+    display: flex;
+    gap: 30px;
+}
+.magazine-details-div .mag_left {
+    width: 30%;
+}
+.magazine-details-div .mag_right {
+    width: 70%;
+}
+.magazine-details-div .mag_right .table_heading {
+    width: 100%;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.magazine-details-div .site_table , .magazine-details-div .site_table table {
+    width: 100%;
+}

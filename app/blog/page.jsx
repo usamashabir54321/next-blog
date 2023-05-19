@@ -101,7 +101,7 @@ const Blog = () => {
         }
         const truncated = text.substr(0, maxLength);
         return truncated.substr(0, truncated.lastIndexOf(' ')) + '...';
-    };          
+    };
     return (
         <div className="sidebar_right">
             {/* bread crumb area */}

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "@/styles/home-page.css";
+import MagazineList from "@/components/magazines/magazine-list";
 
 export const metadata = {
     title: 'Home Page',
@@ -49,7 +50,7 @@ const Home = () => {
                                 <div className="wpb_column vc_column_container vc_col-sm-12 vc_col-has-fill">
                                     <div className="vc_column-inner vc_custom_1438258935637">
                                         <div className="wpb_wrapper">
-                                            <div className="sc_content content_wrap" style={{ marginTop: '4.85em !important', marginBottom: '3.3em !important' }}>
+                                            <div className="sc_content content_wrap py-5">
                                                 <div id="sc_services_502941603" className="sc_services sc_services_style_services-3 sc_services_type_icons  sc_slider_nopagination sc_slider_nocontrols" style={{ width: '100%' }}>
                                                     <div className="sc_columns columns_wrap">
                                                         <div className="column-1_4 column_padding_bottom">
@@ -103,14 +104,16 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
+                            {/* magazine list */}
+                            <MagazineList />
                             {/* posts by category */}
                             <div className="vc_row wpb_row vc_row-fluid">
                                 <div className="wpb_column vc_column_container vc_col-sm-12">
                                 <div className="vc_column-inner">
                                     <div className="wpb_wrapper">
-                                        <div className="sc_content content_wrap" style={{ marginTop: '7.25em !important', marginBottom:'5.6em !important' }}>
+                                        <div className="sc_content content_wrap py-5">
                                             <h6 className="sc_title sc_title_dotted sc_align_left" style={{ float: 'right', marginTop: '0.5em', marginBottom: '0px', textAlign: 'left' }}>بلاگ سے</h6>
-                                            <div id="sc_blogger_1390911916" className="sc_blogger layout_masonri_3 template_masonri  sc_blogger_horizontal no_description" style={{ marginTop: '-1.7em' }}>
+                                            <div id="sc_blogger_1390911916" className="sc_blogger layout_masonri_3 template_masonri  sc_blogger_horizontal no_description">
                                                 <div className="isotope_filters inited">
                                                     <a href="https://kidsplanet.ancorathemes.com/#" data-filter="*" className="theme_button active">تمام</a>
                                                     <a href="https://kidsplanet.ancorathemes.com/#" data-filter=".flt_77" className="theme_button">سرگرمیاں</a>
@@ -274,7 +277,7 @@ const Home = () => {
                                 <div className="wpb_column vc_column_container vc_col-sm-12">
                                     <div className="vc_column-inner">
                                         <div className="wpb_wrapper">
-                                            <div className="sc_content content_wrap" style={{ marginTop: '5.55em !important', marginBottom: '5.55em !important' }}>
+                                            <div className="sc_content content_wrap py-5">
                                                 <div className="columns_wrap sc_columns columns_nofluid sc_columns_count_2">
                                                     <div className="column-1_2 sc_column_item sc_column_item_1 odd first">
                                                         <div className="sc_video_player">
@@ -304,8 +307,8 @@ const Home = () => {
                                     <div className="vc_column-inner">
                                         <div className="wpb_wrapper">
                                             <div className="sc_parallax">
-                                                <div className="sc_parallax_content" style={{ backgroundimage: 'url(/img/parralax.jpg)', backgroundPosition: '50% -331px' }}>
-                                                    <div className="sc_section aligncenter" style={{ marginTop: '5.5em !important', marginBottom: '5.5em !important' }}>
+                                                <div className="sc_parallax_content" style={{ backgroundImage: 'url(/img/parralax.jpg)', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
+                                                    <div className="sc_section aligncenter py-5">
                                                         <div className="sc_section_inner">
                                                             <h6 className="sc_title sc_title_dotted sc_align_center" style={{ textAlign: 'center', color: '#ffffff' }}>نومبر 20, 2023</h6>
                                                             <h2 className="sc_title sc_title_regular sc_align_center" style={{ marginTop: '0.4em', marginBottom: '1.23em', textAlign: 'center', color: '#ffffff' }}>ویڈیو سیمینار: "واضح بچہ”</h2>
@@ -380,7 +383,7 @@ const Home = () => {
                                 <div className="wpb_column vc_column_container vc_col-sm-12">
                                     <div className="vc_column-inner">
                                         <div className="wpb_wrapper">
-                                            <div className="sc_content content_wrap" style={{ marginTop: '5.55em !important', marginBottom: '5.6em !important' }}>
+                                            <div className="sc_content content_wrap py-5">
                                                 <h6 className="sc_title sc_title_dotted" style={{ marginBottom: '3em' }}>گیلری سے</h6>
                                                 <article className="myportfolio-container esg-grid-wrap-container minimal-light esg-entry-skin-polk source_type_custom esg-revealed" id="esg-grid-1-1-wrap" data-alias="gallery-home1" style={{ position: 'relative', zIndex: '0', minHeight: '100px', height: 'auto' }}>
                                                 <div className="esg-grid-1-1-fullscreen-forcer esg-fullscreen-forcer" style={{ left: '0px', width: 'auto' }}>
@@ -568,67 +571,25 @@ const Home = () => {
                                 <div className="wpb_column vc_column_container vc_col-sm-12 vc_col-has-fill">
                                     <div className="vc_column-inner vc_custom_1439201501198">
                                         <div className="wpb_wrapper">
-                                            <div className="sc_content content_wrap" style={{ marginTop: '5em !important', marginBottom: '6em !important' }}>
-                                                <h6 className="sc_title sc_title_dotted" style={{ marginBottom: '4.6em', color: '#ffffff' }}>کہانیاں</h6>
+                                            <div className="sc_content content_wrap py-5">
+                                                <h6 className="sc_title sc_title_dotted" style={{ marginBottom: '2.5em', color: '#ffffff' }}>کہانیاں</h6>
                                                 <div id="sc_testimonials_723916063" className="sc_testimonials sc_testimonials_style_testimonials-3 sc_slider_nopagination sc_slider_nocontrols sc_slider_swiper swiper-slider-container inited sc_testimonials_723916063" style={{ width: '100%', cursor: '-webkit-grab' }}>
-                                                    <div className="slides swiper-wrapper">
-                                                        <div className="swiper-slide">
-                                                            <div id="sc_testimonials_723916063_1" className="sc_testimonial_item">
-                                                                <div className="sc_testimonial_content">اپنے بچوں کو صحت مند زندگی گزارتے ہوئے دیکھیں؟ تحقیق بتاتی ہے کہ والدین کو سخت نظر آنا چاہیے...<span className="sc_icon icon-right sc_icon_shape_round sc_icon_bg_custom button_in_end"></span></div>
-                                                                <div className="sc_testimonial_avatar"><img className="wp-post-image" width="75" height="75" alt="Jenifer Oniston" src="/img/team7-75x75.jpg" /></div>
-                                                                <div className="sc_testimonial_author"><span className="sc_testimonial_author_name">Jenifer Oniston</span><span className="sc_testimonial_author_position">Chicago, IL</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="swiper-slide">
-                                                            <div id="sc_testimonials_723916063_2" className="sc_testimonial_item">
-                                                                <div className="sc_testimonial_content">میں اور میری بیٹی بڑے بستر پر فلم دیکھ رہے ہیں۔ ساتھ ساتھ بیٹھا، میرا لیپ ٹاپ اس کے خلاف کھڑا ہوا...<span className="sc_icon icon-right sc_icon_shape_round sc_icon_bg_custom button_in_end"></span></div>
-                                                                <div className="sc_testimonial_avatar"><img className="wp-post-image" width="75" height="75" alt="Tamara Lee" src="/img/team5-75x75.jpg" /></div>
-                                                                <div className="sc_testimonial_author"><span className="sc_testimonial_author_name">Tamara Lee</span><span className="sc_testimonial_author_position">Chicago, IL</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="swiper-slide">
-                                                            <div id="sc_testimonials_723916063_3" className="sc_testimonial_item">
-                                                                <div className="sc_testimonial_content">پچھلے مہینے، میں گھر کی پلیٹ کے پیچھے اسٹینڈ میں بیٹھا، اور اپنے 8½ سالہ بیٹے کو کھیت میں جاتے دیکھا...<span className="sc_icon icon-right sc_icon_shape_round sc_icon_bg_custom button_in_end"></span></div>
-                                                                <div className="sc_testimonial_avatar"><img className="wp-post-image" width="75" height="75" alt="Alisa Milano" src="/img/team10-75x75.jpg" /></div>
-                                                                <div className="sc_testimonial_author"><span className="sc_testimonial_author_name">Alisa Milano</span><span className="sc_testimonial_author_position">New York, NY</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="swiper-slide">
+                                                    <div className="slides swiper-wrapper" style={{ transform: 'unset', }}>
+                                                        <div className="swiper-slide" style={{ position: 'unset', }}>
                                                             <div id="sc_testimonials_723916063_1" className="sc_testimonial_item">
                                                                 <div className="sc_testimonial_content">میں اور میری بیٹی بڑے بستر پر فلم دیکھ رہے ہیں۔ ساتھ ساتھ بیٹھا، میرا لیپ ٹاپ اس کے خلاف کھڑا ہوا...<span className="sc_icon icon-right sc_icon_shape_round sc_icon_bg_custom button_in_end"></span></div>
                                                                 <div className="sc_testimonial_avatar"><img className="wp-post-image" width="75" height="75" alt="Jenifer Oniston" src="/img/team7-75x75.jpg" /></div>
                                                                 <div className="sc_testimonial_author"><span className="sc_testimonial_author_name">Jenifer Oniston</span><span className="sc_testimonial_author_position">Chicago, IL</span></div>
                                                             </div>
                                                         </div>
-                                                        <div className="swiper-slide">
+                                                        <div className="swiper-slide" style={{ position: 'unset', }}>
                                                             <div id="sc_testimonials_723916063_2" className="sc_testimonial_item">
                                                                 <div className="sc_testimonial_content">اپنے بچوں کو صحت مند زندگی گزارتے ہوئے دیکھیں؟ تحقیق بتاتی ہے کہ والدین کو سخت نظر آنا چاہیے...<span className="sc_icon icon-right sc_icon_shape_round sc_icon_bg_custom button_in_end"></span></div>
                                                                 <div className="sc_testimonial_avatar"><img className="wp-post-image" width="75" height="75" alt="Tamara Lee" src="/img/team5-75x75.jpg" /></div>
                                                                 <div className="sc_testimonial_author"><span className="sc_testimonial_author_name">Tamara Lee</span><span className="sc_testimonial_author_position">Chicago, IL</span></div>
                                                             </div>
                                                         </div>
-                                                        <div className="swiper-slide">
-                                                            <div id="sc_testimonials_723916063_3" className="sc_testimonial_item">
-                                                                <div className="sc_testimonial_content">اپنے بچوں کو صحت مند زندگی گزارتے ہوئے دیکھیں؟ تحقیق بتاتی ہے کہ والدین کو سخت نظر آنا چاہیے...<span className="sc_icon icon-right sc_icon_shape_round sc_icon_bg_custom button_in_end"></span></div>
-                                                                <div className="sc_testimonial_avatar"><img className="wp-post-image" width="75" height="75" alt="Alisa Milano" src="/img/team10-75x75.jpg" /></div>
-                                                                <div className="sc_testimonial_author"><span className="sc_testimonial_author_name">Alisa Milano</span><span className="sc_testimonial_author_position">New York, NY</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="swiper-slide swiper-slide-visible swiper-slide-active">
-                                                            <div id="sc_testimonials_723916063_1" className="sc_testimonial_item">
-                                                                <div className="sc_testimonial_content">میں اور میری بیٹی بڑے بستر پر فلم دیکھ رہے ہیں۔ ساتھ ساتھ بیٹھا، میرا لیپ ٹاپ اس کے خلاف کھڑا ہوا...<span className="sc_icon icon-right sc_icon_shape_round sc_icon_bg_custom button_in_end"></span></div>
-                                                                <div className="sc_testimonial_avatar"><img className="wp-post-image" width="75" height="75" alt="Jenifer Oniston" src="/img/team7-75x75.jpg" /></div>
-                                                                <div className="sc_testimonial_author"><span className="sc_testimonial_author_name">Jenifer Oniston</span><span className="sc_testimonial_author_position">Chicago, IL</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="swiper-slide swiper-slide-visible">
-                                                            <div id="sc_testimonials_723916063_2" className="sc_testimonial_item">
-                                                                <div className="sc_testimonial_content">اپنے بچوں کو صحت مند زندگی گزارتے ہوئے دیکھیں؟ تحقیق بتاتی ہے کہ والدین کو سخت نظر آنا چاہیے...<span className="sc_icon icon-right sc_icon_shape_round sc_icon_bg_custom button_in_end"></span></div>
-                                                                <div className="sc_testimonial_avatar"><img className="wp-post-image" width="75" height="75" alt="Tamara Lee" src="/img/team5-75x75.jpg" /></div>
-                                                                <div className="sc_testimonial_author"><span className="sc_testimonial_author_name">Tamara Lee</span><span className="sc_testimonial_author_position">Chicago, IL</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="swiper-slide swiper-slide-visible">
+                                                        <div className="swiper-slide" style={{ position: 'unset', }}>
                                                             <div id="sc_testimonials_723916063_3" className="sc_testimonial_item">
                                                                 <div className="sc_testimonial_content">اپنے بچوں کو صحت مند زندگی گزارتے ہوئے دیکھیں؟ تحقیق بتاتی ہے کہ والدین کو سخت نظر آنا چاہیے...<span className="sc_icon icon-right sc_icon_shape_round sc_icon_bg_custom button_in_end"></span></div>
                                                                 <div className="sc_testimonial_avatar"><img className="wp-post-image" width="75" height="75" alt="Alisa Milano" src="/img/team10-75x75.jpg" /></div>
