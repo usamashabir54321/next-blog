@@ -19,7 +19,7 @@ const SingleMagazine = () => {
         });
     };
     const getPostByCatId = async (id) => {
-        const postres = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/posts?categories=${id}&_fields=id,slug,title,acf`);
+        const postres = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/posts?categories=${id}&_fields=id,slug,title,acf&order=asc`);
         const postData = await postres.json();
         setPosts(postData);
     };
@@ -54,7 +54,7 @@ const SingleMagazine = () => {
                                                                     {
                                                                         posts.map((obj, index) => (
                                                                             <tr key={index}>
-                                                                                <td>1</td>
+                                                                                <td>{index+1}</td>
                                                                                 <td><Link href={`/magazines/${slug}/${obj.slug}`} className="table_title">{obj.title.rendered}</Link></td>
                                                                                 <td><Link href={`/magazines/${slug}/${obj.slug}`}>{obj.acf.post_auhor}</Link></td>
                                                                             </tr>

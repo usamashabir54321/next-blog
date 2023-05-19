@@ -108,7 +108,7 @@ const MagazineList = () => {
                                         <div className="isotope_wrap inited" data-columns="3" style={{ display: 'flex', flexWrap: 'wrap' }}>
                                             {
                                                 cats.map((obj, index) => (
-                                                    <div key={index} className="isotope_item isotope_item_masonri isotope_item_masonri_3 isotope_column_3 flt_77 flt_79 flt_17 flt_12 isotope_item_show">
+                                                    <div key={index} className="isotope_item isotope_item_masonri isotope_item_masonri_3 isotope_column_4 flt_77 flt_79 flt_17 flt_12 isotope_item_show">
                                                         <div className="post_item post_item_masonri post_item_masonri_3 post_format_standard odd">
                                                             <div className="post_featured">
                                                                 {/* thumbnail */}
