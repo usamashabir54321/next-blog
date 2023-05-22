@@ -86,3 +86,11 @@ ul#menu_user {
 .magazine-details-div .site_table , .magazine-details-div .site_table table {
     width: 100%;
 }
+.mt-1 {
+    margin-top: 1rem;
+}
+#subscription-div {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}

@@ -7,16 +7,26 @@ const PostSingle = () => {
     const params = useParams();
     const { postslug } = params;
     const decodePostSlug = decodeURIComponent(postslug);
-    const [postData, setPostData] = useState('empty');
+    const [postData, setPostData] = useState('nothing');
+    const [subscription, setSubscription] = useState('');
     useEffect(() => {
-        // getting post data
-        getPostData();
+        // current user name
+        const user_name = localStorage.getItem('user_name');
+        // if user name exists
+        if (user_name) {
+            // check weather user has subscription or not
+            // getting post data if user has buy subscription plan
+            setPostData('loading');
+            getPostData();
+        } else {
+            setSubscription('no');
+            setTimeout(() => { window.open(`${process.env.NEXT_PUBLIC_BACKEND_URL}/membership-account/membership-levels`); }, 2000);
+        }
     }, []);
     const getPostData = async () => {
         const resp = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/posts?slug=${decodePostSlug}`);
         const data = await resp.json();
         // setting post data to react state
-        console.log(data);
         setPostData(data[0]);
     };
     return (
@@ -25,9 +35,10 @@ const PostSingle = () => {
             <div className="page_content_wrap">
                 <div className="content_wrap">
                     <div className="content">
+                        {  subscription == 'no' && <p>Please buy subscription</p> }
+                        { postData == 'loading' && 'لوڈ ہو رہا ہے۔...' }
                         {
-                            postData == 'empty' ? 'لوڈ ہو رہا ہے۔...' :
-                            postData.id ?
+                            postData.id &&
                             <>
                                 {/* post details content */}
                                 <article className="itemscope post_item post_item_single post_featured_default post_format_standard post-492 post type-post status-publish format-standard has-post-thumbnail hentry category-masonry tag-activities tag-elementary tag-pre-school tag-sport" itemScope="" itemType="//schema.org/Article">
@@ -124,7 +135,9 @@ const PostSingle = () => {
                                     </div>
                                 </section>
                             </>
-                            : <p>مضمون کا ڈیٹا نہیں ہے۔</p>
+                        }
+                        {
+                            !postData.id && !postData == 'loading' && <p>مضمون کا ڈیٹا نہیں ہے۔</p>
                         }
                     </div>
                     {/* post side bar */}
