@@ -114,7 +114,7 @@ const SiteFooter = () => {
             </footer>
             {/* footer map */}
             <div id="sc_googlemap_1868353902" className="sc_googlemap" style={{ width:'100%',height:'400px' }} data-zoom="16" data-style="greyscale">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.992970205091!2d74.28222237530896!3d31.441860474249996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919014643c3aee9%3A0x45dda9e1748a5ab0!2sNext%20Logixs!5e0!3m2!1sen!2s!4v1683626341525!5m2!1sen!2s" width="100%" height="450" style={{ border: '0' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217759.55800987!2d74.169581829143!3d31.483127590702157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483e58107d9%3A0xc23abe6ccc7e2462!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1684876674298!5m2!1sen!2s" width="100%" height="450" style={{ border: '0' }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             {/* footer copyright */}
             <div className="copyright_wrap copyright_style_socials  scheme_original">
