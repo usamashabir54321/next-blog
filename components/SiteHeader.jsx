@@ -58,8 +58,8 @@ const SiteHeader = () => {
                                 <div className="logo">
                                     {/* logo */}
                                     <Link href="/">
-                                        <img src="/img/logo_light.png" className="logo_main" alt="img" />
-                                        <img src="/img/logo_light.png" className="logo_fixed" alt="img" />
+                                        <img src="/img/web-logo.png" className="logo_main" alt="img" />
+                                        <img src="/img/web-logo.png" className="logo_fixed" alt="img" />
                                     </Link>
                                 </div>
                             </div>

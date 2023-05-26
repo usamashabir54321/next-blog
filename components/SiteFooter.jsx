@@ -10,7 +10,7 @@ const SiteFooter = () => {
                             <aside id="themerex_widget_socials-3" className="widget_number_1 column-1_4 widget widget_socials">
                                 <div className="widget_inner">
                                     <div className="logo">
-                                        <a href="/"><img src="/img/logo_dark.png" className="logo_main" alt="" /></a>
+                                        <a href="/"><img src="/img/web-logo.png" className="logo_main" alt="" /></a>
                                     </div>
                                     <div className="logo_descr">ہم آپ کے بچوں کی صحیح طریقے سے نشوونما کرنے اور سیکھنے اور تفریحی تجربات کے ذریعے بڑھنے میں مدد کرتے ہیں۔</div>
                                 </div>
