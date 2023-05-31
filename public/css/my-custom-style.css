@@ -4,6 +4,9 @@ body {
 body, div#slider-1-slide-2-layer-2, div#slider-1-slide-2-layer-3, a.sc_button.sc_button_style_filled {
     font-family: Jameel-Noori-Nastaleeq !important;
 }
+#mobile-nav-toggler {
+	display: none;
+}
 h3.sc_services_item_title {
     font-family: unet;
 }
@@ -123,7 +126,10 @@ ul#menu_user {
     text-align: right;
     margin-top: 5px;
 }
-
+.post_content.isotope_item_content h4.post_title {
+    margin-top: 15px !important;
+    margin-right: 15px !important;
+}
 .footer_wrap img.logo_main {
     max-width: 170px;
     margin-top: 70px;
@@ -139,4 +145,136 @@ ul#menu_user {
 }
 .scheme_original footer form.wpcf7-form textarea, .scheme_original footer form.wpcf7-form input[type=text], .scheme_original footer form.wpcf7-form input[type=email], .scheme_original footer .sc_contact_form .sc_contact_form_item input[type=text], .scheme_original footer .sc_contact_form .sc_contact_form_item textarea {
     background-color: rgb(177 177 177 / 30%);
+}
+.footer_wrap_inner.widget_area_inner {
+    border-top: 2px solid gainsboro;
+}
+
+@media (max-width: 1250px) {
+    .menu_main_nav>li>a {
+        padding: 0.6em 1em;
+    }
+    header .top_panel_middle .columns_wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    header .logo-era, header .top_search_panel  {
+        order: 1;
+    }
+    header .menu-era {
+        order: 2;
+        width: 100%;
+		display: none !important;
+    }
+	header .menu-era.active {
+		display: flex !important;
+	}
+	#mobile-nav-toggler {
+		display: inline-block;
+		order: 1;
+		padding: 10px;
+	}
+}
+@media (max-width: 768px) {
+    .top_panel_style_1 .logo {
+        width: 100%;
+    }
+    .logo-era {
+        padding: 0 !important;
+    }
+    .rs-parallax-wrap.rs-layer-wrap.rs-slide-1 {
+        width: 100% !important;
+        right: 80px;
+    }
+    .accent1_bg.slider_bg {
+        width: 75%;
+        height: 360px;
+    }
+    div#slider-1-slide-2-layer-2 {
+        padding: 45px 0px;
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .rs-parallax-wrap.rs-layer-wrap.rs-slide-3 {
+        right: 80px;
+        top: 350px;
+    }
+    div#slider-1-slide-2-layer-3 {
+        width: 80%;
+        white-space: normal;
+        margin: 0px auto;
+    }
+    .isotope_filters.inited {
+        width: 100%;
+        padding-top: 20px;
+    }
+    .isotope_wrap.inited {
+        height: 800px !IMPORTANT;
+    }
+    .isotope_item.isotope_item_masonri.isotope_item_masonri_3.isotope_column_3.flt_77.flt_79.flt_13.flt_63.flt_12.isotope_item_show {
+        top: 450px !important;
+    }
+    .sc_video_frame.sc_video_play_button {
+        height: 200px !important;
+    }
+    .sc_video_frame.sc_video_play_button::before {
+        top: 48% !important;
+    }
+    .sc_testimonials_style_testimonials-3 .sc_testimonial_item {
+        padding: 0px !important;
+    }
+    .body_filled footer.widget_area[class*=scheme_] .footer_wrap_inner {
+        padding: 0em 0 1em;
+    }
+    .sc_testimonial_content {
+        width: 236px;
+    }
+    .magazine-details-div {
+        display: block;
+    }
+    .magazine-details-div .mag_left {
+        width: 100%;
+    }
+    .magazine-details-div .mag_right {
+        width: 100%;
+        margin-top: 40px;
+    }
+    h4.widget_title {
+        font-size: 30px;
+        margin-bottom: 30px !important;
+    }
+    .footer_wrap img.logo_main {
+        max-width: 110px;
+    }
+}
+@media (max-width: 525px) {
+    .accent1_bg.slider_bg {
+        width: 95%;
+        height: 360px;
+    }
+    div#slider-1-slide-2-layer-1 {
+        right: -70px;
+    }
+    .rs-parallax-wrap.rs-layer-wrap.rs-slide-2 {
+        right: 40px;
+    }
+    div#slider-1-slide-2-layer-3 {
+        display: block !important;
+    }
+    .rs-parallax-wrap.rs-layer-wrap.rs-slide-3 {
+        right: -20px;
+        top: 340px;
+    }
+    .rs-parallax-wrap.rs-layer-wrap.rs-slide-4 {
+        right: 25px;
+    }
+}
+@media (max-width: 520px) {
+    ul#menu_main li a {
+        font-size: 18px;
+        padding: 10px;
+    }
 }

@@ -1,6 +1,6 @@
-import Link from "next/link";
 import "@/styles/home-page.css";
 import MagazineList from "@/components/magazines/magazine-list";
+import GalleryList from "@/components/gallery/GalleryList";
 
 export const metadata = {
     title: 'Home Page',
@@ -93,146 +93,8 @@ const Home = () => {
                             </div>
                             {/* magazine list */}
                             <MagazineList />
-                            {/* posts by category */}
-                            <div className="vc_row wpb_row vc_row-fluid">
-                                <div className="wpb_column vc_column_container vc_col-sm-12">
-                                <div className="vc_column-inner">
-                                    <div className="wpb_wrapper">
-                                        <div className="sc_content content_wrap py-5">
-                                            <h6 className="sc_title sc_title_dotted sc_align_left" style={{ float: 'right', marginTop: '0.5em', marginBottom: '0px', textAlign: 'left' }}> مضامین  </h6>
-                                            <div id="sc_blogger_1390911916" className="sc_blogger layout_masonri_3 template_masonri  sc_blogger_horizontal no_description">
-                                                <div className="isotope_filters inited">
-                                                    <a href="https://kidsplanet.ancorathemes.com/#" data-filter="*" className="theme_button active">تمام</a>
-                                                    <a href="https://kidsplanet.ancorathemes.com/#" data-filter=".flt_77" className="theme_button">اللہ کا دوست</a>
-                                                    <a href="https://kidsplanet.ancorathemes.com/#" data-filter=".flt_79" className="theme_button">ابتدائی</a>
-                                                    <a href="https://kidsplanet.ancorathemes.com/#" data-filter=".flt_17" className="theme_button">پری اسکول</a>
-                                                    <a href="https://kidsplanet.ancorathemes.com/#" data-filter=".flt_12" className="theme_button">کھیل</a>
-                                                    <a href="https://kidsplanet.ancorathemes.com/#" data-filter=".flt_64" className="theme_button">کتابیں</a>
-                                                    <a href="https://kidsplanet.ancorathemes.com/#" data-filter=".flt_13" className="theme_button">ادارہ</a>
-                                                </div>
-                                                <div className="isotope_wrap inited" data-columns="3" style={{ position: 'relative', height: '1013.35px' }}>
-                                                    <div className="isotope_item isotope_item_masonri isotope_item_masonri_3 isotope_column_3 flt_77 flt_79 flt_17 flt_12 isotope_item_show" style={{ position: 'absolute', left: '0px', top: '0px', opacity: '1' }}>
-                                                        <div className="post_item post_item_masonri post_item_masonri_3 post_format_standard odd">
-                                                            <div className="post_featured">
-                                                            <div className="post_thumb">
-                                                                <a className="hover_icon hover_icon_link" href="https://kidsplanet.ancorathemes.com/do-you-think-you-can-spoil-your-baby-with-too-much-love/"><img className="wp-post-image" width="370" alt="Do You Think You Can Spoil Your Baby with Too Much Love?" src="/img/Depositphotos_30164331_original-370x367.jpg" /></a> 
-                                                            </div>
-                                                            </div>
-                                                            <div className="post_content isotope_item_content">
-                                                            <h4 className="post_title"><a href="https://kidsplanet.ancorathemes.com/do-you-think-you-can-spoil-your-baby-with-too-much-love/">کیا آپ کو لگتا ہے کہ آپ اپنے بچے کو بہت زیادہ پیار سے خراب کر سکتے ہیں؟</a></h4>
-                                                            <div className="post_info">
-                                                                <span className="post_info_item post_info_posted"><a href="https://kidsplanet.ancorathemes.com/do-you-think-you-can-spoil-your-baby-with-too-much-love/" className="post_info_date">اگست 10, 2015</a></span>
-                                                                <span className="post_info_item post_info_posted_by"> کی طرف سے<a href="https://kidsplanet.ancorathemes.com/author/admin/" className="post_info_author">ایڈمن</a></span>
-                                                                <span className="post_info_item post_info_counters"> <a className="post_counters_item post_counters_comments icon-comment" title="Comments - 0" href="https://kidsplanet.ancorathemes.com/do-you-think-you-can-spoil-your-baby-with-too-much-love/#respond"><span className="post_counters_number">0</span></a>
-                                                                <a className="post_counters_item post_counters_likes icon-heart-empty enabled inited" title="Like" href="https://kidsplanet.ancorathemes.com/#" data-postid="492" data-likes="3" data-title-like="Like" data-title-dislike="Dislike"><span className="post_counters_number">3</span></a>
-                                                                </span>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="isotope_item isotope_item_masonri isotope_item_masonri_3 isotope_column_3 flt_64 flt_13 flt_63 flt_12 flt_78 isotope_item_show" style={{ position: 'absolute', left: '399px', top: '0px', opacity: '1' }}>
-                                                        <div className="post_item post_item_masonri post_item_masonri_3 post_format_standard even">
-                                                            <div className="post_featured">
-                                                            <div className="post_thumb">
-                                                                <a className="hover_icon hover_icon_link" href="https://kidsplanet.ancorathemes.com/self-awareness-how-kids-make-sense-of-life-experiences/"><img className="wp-post-image" width="370" alt="Self-Awareness: How Kids Make Sense of Life Experiences" src="/img/Depositphotos_4730439-370x247.jpg" /></a> 
-                                                            </div>
-                                                            </div>
-                                                            <div className="post_content isotope_item_content">
-                                                            <h4 className="post_title"><a href="https://kidsplanet.ancorathemes.com/self-awareness-how-kids-make-sense-of-life-experiences/">خود آگاہی: بچے زندگی کے تجربات کا احساس کیسے کرتے ہیں۔</a></h4>
-                                                            <div className="post_info">
-                                                                <span className="post_info_item post_info_posted"><a href="https://kidsplanet.ancorathemes.com/self-awareness-how-kids-make-sense-of-life-experiences/" className="post_info_date">اگست 10, 2015</a></span>
-                                                                <span className="post_info_item post_info_posted_by"> کی طرف سے<a href="https://kidsplanet.ancorathemes.com/author/admin/" className="post_info_author">ایڈمن</a></span>
-                                                                <span className="post_info_item post_info_counters"> <a className="post_counters_item post_counters_comments icon-comment" title="Comments - 0" href="https://kidsplanet.ancorathemes.com/self-awareness-how-kids-make-sense-of-life-experiences/#respond"><span className="post_counters_number">0</span></a>
-                                                                <a className="post_counters_item post_counters_likes icon-heart-empty enabled inited" title="Like" href="https://kidsplanet.ancorathemes.com/#" data-postid="491" data-likes="1" data-title-like="Like" data-title-dislike="Dislike"><span className="post_counters_number">1</span></a>
-                                                                </span>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="isotope_item isotope_item_masonri isotope_item_masonri_3 isotope_column_3 isotope_item_show" style={{ position: 'absolute', left: '799px', top: '0px', opacity: '1' }}>
-                                                        <div className="post_item post_item_masonri post_item_masonri_3 post_format_standard odd">
-                                                            <div className="post_featured">
-                                                            <div className="post_thumb">
-                                                                <a className="hover_icon hover_icon_link" href="https://kidsplanet.ancorathemes.com/15-ways-to-improve-your-childs-chances-for-success/"><img className="wp-post-image" width="370" alt="15 Ways To Improve Your Child's Chances For Success" src="/img/Depositphotos_31817075_original-370x366.jpg" /></a> 
-                                                            </div>
-                                                            </div>
-                                                            <div className="post_content isotope_item_content">
-                                                            <h4 className="post_title"><a href="https://kidsplanet.ancorathemes.com/15-ways-to-improve-your-childs-chances-for-success/">اپنے بچے کی کامیابی کے امکانات کو بہتر بنانے کے 15 طریقے</a></h4>
-                                                            <div className="post_info">
-                                                                <span className="post_info_item post_info_posted"><a href="https://kidsplanet.ancorathemes.com/15-ways-to-improve-your-childs-chances-for-success/" className="post_info_date">July 23, 2015</a></span>
-                                                                <span className="post_info_item post_info_posted_by"> کی طرف سے<a href="https://kidsplanet.ancorathemes.com/author/admin/" className="post_info_author">ایڈمن</a></span>
-                                                                <span className="post_info_item post_info_counters"> <a className="post_counters_item post_counters_comments icon-comment" title="Comments - 0" href="https://kidsplanet.ancorathemes.com/15-ways-to-improve-your-childs-chances-for-success/#respond"><span className="post_counters_number">0</span></a>
-                                                                <a className="post_counters_item post_counters_likes icon-heart-empty enabled inited" title="Like" href="https://kidsplanet.ancorathemes.com/#" data-postid="204" data-likes="1" data-title-like="Like" data-title-dislike="Dislike"><span className="post_counters_number">1</span></a>
-                                                                </span>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="isotope_item isotope_item_masonri isotope_item_masonri_3 isotope_column_3 flt_76 flt_17 flt_63 flt_78 isotope_item_show" style={{ position: 'absolute', left: '399px', top: '446px', opacity: '1' }}>
-                                                        <div className="post_item post_item_masonri post_item_masonri_3 post_format_standard even">
-                                                            <div className="post_featured">
-                                                            <div className="post_thumb">
-                                                                <a className="hover_icon hover_icon_link" href="https://kidsplanet.ancorathemes.com/ways-to-recover-from-post-childhood-adversity-syndrome/"><img className="wp-post-image" width="370" alt="Ways to Recover From Post Childhood Adversity Syndrome" src="/img/Depositphotos_25255173_l-2-370x367.jpg" /></a> 
-                                                            </div>
-                                                            </div>
-                                                            <div className="post_content isotope_item_content">
-                                                            <h4 className="post_title"><a href="https://kidsplanet.ancorathemes.com/ways-to-recover-from-post-childhood-adversity-syndrome/">پوسٹ چائلڈہڈ ایڈورسٹی سنڈروم سے صحت یاب ہونے کے طریقے</a></h4>
-                                                            <div className="post_info">
-                                                                <span className="post_info_item post_info_posted"><a href="https://kidsplanet.ancorathemes.com/ways-to-recover-from-post-childhood-adversity-syndrome/" className="post_info_date">July 22, 2015</a></span>
-                                                                <span className="post_info_item post_info_posted_by"> کی طرف سے<a href="https://kidsplanet.ancorathemes.com/author/admin/" className="post_info_author">ایڈمن</a></span>
-                                                                <span className="post_info_item post_info_counters"> <a className="post_counters_item post_counters_comments icon-comment" title="Comments - 0" href="https://kidsplanet.ancorathemes.com/ways-to-recover-from-post-childhood-adversity-syndrome/#respond"><span className="post_counters_number">0</span></a>
-                                                                <a className="post_counters_item post_counters_likes icon-heart-empty enabled inited" title="Like" href="https://kidsplanet.ancorathemes.com/#" data-postid="136" data-likes="0" data-title-like="Like" data-title-dislike="Dislike"><span className="post_counters_number">0</span></a>
-                                                                </span>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="isotope_item isotope_item_masonri isotope_item_masonri_3 isotope_column_3 flt_77 flt_64 flt_79 flt_12 flt_16 isotope_item_show" style={{ position: 'absolute', left: '799px', top: '565px', opacity: '1' }}>
-                                                        <div className="post_item post_item_masonri post_item_masonri_3 post_format_standard odd">
-                                                            <div className="post_featured">
-                                                            <div className="post_thumb">
-                                                                <a className="hover_icon hover_icon_link" href="https://kidsplanet.ancorathemes.com/10-simple-truth-about-raising-happy-and-successful-kids/"><img className="wp-post-image" width="370" alt="10 Simple Truth About Raising Happy and Successful Kids" src="/img/Depositphotos_16048739-370x247.jpg" /></a> 
-                                                            </div>
-                                                            </div>
-                                                            <div className="post_content isotope_item_content">
-                                                            <h4 className="post_title"><a href="https://kidsplanet.ancorathemes.com/10-simple-truth-about-raising-happy-and-successful-kids/">خوش اور کامیاب بچوں کی پرورش کے بارے میں 10 سادہ سچائی</a></h4>
-                                                            <div className="post_info">
-                                                                <span className="post_info_item post_info_posted"><a href="https://kidsplanet.ancorathemes.com/10-simple-truth-about-raising-happy-and-successful-kids/" className="post_info_date">July 22, 2015</a></span>
-                                                                <span className="post_info_item post_info_posted_by"> کی طرف سے<a href="https://kidsplanet.ancorathemes.com/author/admin/" className="post_info_author">ایڈمن</a></span>
-                                                                <span className="post_info_item post_info_counters"> <a className="post_counters_item post_counters_comments icon-comment" title="Comments - 0" href="https://kidsplanet.ancorathemes.com/10-simple-truth-about-raising-happy-and-successful-kids/#respond"><span className="post_counters_number">0</span></a>
-                                                                <a className="post_counters_item post_counters_likes icon-heart-empty enabled inited" title="Like" href="https://kidsplanet.ancorathemes.com/#" data-postid="133" data-likes="1" data-title-like="Like" data-title-dislike="Dislike"><span className="post_counters_number">1</span></a>
-                                                                </span>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="isotope_item isotope_item_masonri isotope_item_masonri_3 isotope_column_3 flt_77 flt_79 flt_13 flt_63 flt_12 isotope_item_show" style={{ position: 'absolute', left: '0px', top: '566px', opacity: '1' }}>
-                                                        <div className="post_item post_item_masonri post_item_masonri_3 post_format_standard even last">
-                                                            <div className="post_featured">
-                                                            <div className="post_thumb">
-                                                                <a className="hover_icon hover_icon_link" href="https://kidsplanet.ancorathemes.com/why-do-aerobically-fit-children-have-better-math-skills/"><img className="wp-post-image" width="370" alt="Why Do Aerobically Fit Children Have Better Math Skills?" src="/img/Depositphotos_10193483-370x247.jpg" /></a> 
-                                                            </div>
-                                                            </div>
-                                                            <div className="post_content isotope_item_content">
-                                                            <h4 className="post_title"><a href="https://kidsplanet.ancorathemes.com/why-do-aerobically-fit-children-have-better-math-skills/">ایروبک طور پر فٹ بچوں میں ریاضی کی بہتر مہارتیں کیوں ہوتی ہیں؟</a></h4>
-                                                            <div className="post_info">
-                                                                <span className="post_info_item post_info_posted"><a href="https://kidsplanet.ancorathemes.com/why-do-aerobically-fit-children-have-better-math-skills/" className="post_info_date">July 22, 2015</a></span>
-                                                                <span className="post_info_item post_info_posted_by"> کی طرف سے<a href="https://kidsplanet.ancorathemes.com/author/admin/" className="post_info_author">ایڈمن</a></span>
-                                                                <span className="post_info_item post_info_counters"> <a className="post_counters_item post_counters_comments icon-comment" title="Comments - 0" href="https://kidsplanet.ancorathemes.com/why-do-aerobically-fit-children-have-better-math-skills/#respond"><span className="post_counters_number">0</span></a>
-                                                                <a className="post_counters_item post_counters_likes icon-heart-empty enabled inited" title="Like" href="https://kidsplanet.ancorathemes.com/#" data-postid="131" data-likes="1" data-title-like="Like" data-title-dislike="Dislike"><span className="post_counters_number">1</span></a>
-                                                                </span>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <Link href="/blog" className="sc_button sc_button_square sc_button_style_filled  sc_button_bg_link sc_button_size_small" style={{ marginTop: '1.15em' }}>مزید مضامین</Link>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+                            {/* gallery list */}
+                            <GalleryList />
                             {/* video section */}
                             <div className="vc_row wpb_row vc_row-fluid">
                                 <div className="wpb_column vc_column_container vc_col-sm-12">
@@ -268,7 +130,7 @@ const Home = () => {
                                     <div className="vc_column-inner vc_custom_1439201501198">
                                         <div className="wpb_wrapper">
                                             <div className="sc_content content_wrap py-5">
-                                                <h6 className="sc_title sc_title_dotted" style={{ marginBottom: '2.5em', color: '#ffffff' }}>کہانیاں</h6>
+                                                <h6 className="sc_title sc_title_dotted" style={{ marginBottom: '1em', color: '#ffffff' }}>کہانیاں</h6>
                                                 <div id="sc_testimonials_723916063" className="sc_testimonials sc_testimonials_style_testimonials-3 sc_slider_nopagination sc_slider_nocontrols sc_slider_swiper swiper-slider-container inited sc_testimonials_723916063" style={{ width: '100%', cursor: '-webkit-grab' }}>
                                                     <div className="slides swiper-wrapper" style={{ transform: 'unset', }}>
                                                         <div className="swiper-slide" style={{ position: 'unset', }}>
