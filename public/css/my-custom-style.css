@@ -1,8 +1,32 @@
-body {
+body { 
     direction: rtl;
 }
 body, div#slider-1-slide-2-layer-2, div#slider-1-slide-2-layer-3, a.sc_button.sc_button_style_filled {
     font-family: Jameel-Noori-Nastaleeq !important;
+}
+h3.sc_services_item_title {
+    font-family: unet;
+}
+.py-5 {
+    padding: 2rem 0 !important;
+}
+.top_panel_wrap .logo_main {
+    max-height: 80px;
+    padding: 10px 10px;
+    margin-bottom: 0px;
+}
+.column-3_5.contact_logo {
+    padding: 20px 0px;
+}
+.column-1_5.top_search_panel {
+    padding: 11px 0px;
+}
+.menu_main_nav>li>a {
+    padding: 0.6em 1.6em;
+    line-height: 1.5em;
+}
+.scheme_original .menu_user_login:before {
+    display: none;
 }
 div#slider-1-slide-2-layer-2 {
     font-size: 55px;
@@ -93,4 +117,26 @@ ul#menu_user {
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
+}
+.sc_blogger .isotope_filters {
+    margin: 1em 0 1em;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.footer_wrap img.logo_main {
+    max-width: 170px;
+    margin-top: 70px;
+}
+.scheme_original footer.widget_area .sc_list_style_iconed li, .scheme_original footer.widget_area .widget_title, .scheme_original footer.widget_area .widget_title>a, .scheme_original footer.widget_area .post_title a {
+    color: #000;
+}
+.scheme_original .footer_wrap_inner {
+    color: #000;
+}
+.scheme_original .footer_wrap_inner {
+    background-color: #ffffff;
+}
+.scheme_original footer form.wpcf7-form textarea, .scheme_original footer form.wpcf7-form input[type=text], .scheme_original footer form.wpcf7-form input[type=email], .scheme_original footer .sc_contact_form .sc_contact_form_item input[type=text], .scheme_original footer .sc_contact_form .sc_contact_form_item textarea {
+    background-color: rgb(177 177 177 / 30%);
 }
