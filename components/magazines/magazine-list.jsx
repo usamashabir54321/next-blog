@@ -11,8 +11,17 @@ const MagazineList = () => {
     useEffect(() => {
             // calling fetching category function
 		// fetchCats(1);
-		setCats(JSON.parse(localStorage.getItem("lastest_cats")));
-		setTotalPages(localStorage.getItem("total_cat_pages"));
+		if (typeof window !== "undefined") {
+			const storedData = localStorage.getItem('lastest_cats');
+			if (storedData) {
+				try {
+					const parsedData = JSON.parse(storedData);
+					setCats(parsedData);
+				} catch (error) { console.error('Error parsing JSON data:', error); }
+			}
+			// setCats( JSON.parse(localStorage.getItem("lastest_cats")) );
+			setTotalPages(localStorage.getItem("total_cat_pages"));
+		}
     }, []);
         // fetching categories function
     const fetchCats = async (nowpage) => {
