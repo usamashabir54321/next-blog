@@ -149,6 +149,15 @@ ul#menu_user {
 .footer_wrap_inner.widget_area_inner {
     border-top: 2px solid gainsboro;
 }
+.pmpro_content_message {
+    display: none;
+}
+a.btn {
+    background-color: #ff8454;
+    color: white;
+    padding: 8px 20px;
+    font-size: 20px;
+}
 
 @media (max-width: 1250px) {
     .menu_main_nav>li>a {

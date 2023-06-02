@@ -4,21 +4,21 @@ import { useState, useEffect } from "react";
 
 const MagazineList = () => {
     // basic variables
-    const [cats, setCats] = useState('empty');
+    const [cats, setCats] = useState( JSON.parse(localStorage.getItem("lastest_cats")) );
     const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(0);
+    const [totalPages, setTotalPages] = useState( localStorage.getItem("total_cat_pages") );
     const paginationLinks = [];
     useEffect(() => {
             // calling fetching category function
-        fetchCats();
-    }, [currentPage]);
+		// fetchCats(1);
+    }, []);
         // fetching categories function
-    const fetchCats = async () => {
+    const fetchCats = async (nowpage) => {
         try {
                 // posts with page number and offset
             const perPage = 12; // Number of posts per page
             const response = await fetch(
-                `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/categories?per_page=${perPage}&page=${currentPage}&_fields=id,description,slug,acf&exclude=1`
+                `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/categories?per_page=${perPage}&page=${nowpage}&_fields=id,description,slug,acf&exclude=1`
             );
             const data = await response.json();
                 // updating posts array state
@@ -35,6 +35,7 @@ const MagazineList = () => {
         const myapp = document.getElementById('my-app');
         myapp.scrollIntoView({ behavior: 'smooth' });
         setCurrentPage(page);
+		fetchCats(page);
     };
         // pagination prev link
     const renderPrevLink = () => {
