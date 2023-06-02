@@ -1,38 +1,23 @@
 'use client';
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import useStore from '@/store';
 
 const MagazineList = () => {
     // basic variables
+	const { latestCats, catTotalPages, perPage } = useStore();
     const [cats, setCats] = useState('empty');
     const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(null);
+    const [totalPages, setTotalPages] = useState(catTotalPages);
     const paginationLinks = [];
     useEffect(() => {
-            // calling fetching category function
-		// fetchCats(1);
-		const timeout = setTimeout(() => {
-			// Code to be executed after the delay
-			if (typeof window !== "undefined") {
-				const storedData = localStorage.getItem('lastest_cats');
-				if (storedData) {
-					try {
-						const parsedData = JSON.parse(storedData);
-						setCats(parsedData);
-					} catch (error) { console.error('Error parsing JSON data:', error); }
-				}
-				// setCats( JSON.parse(localStorage.getItem("lastest_cats")) );
-				setTotalPages(localStorage.getItem("total_cat_pages"));
-			}
-		}, 2000);
-		  // Clean up the timeout on component unmount
-		return () => clearTimeout(timeout);
-    }, []);
+        // calling fetching category function
+		setCats(latestCats);
+    }, [catTotalPages]);
         // fetching categories function
     const fetchCats = async (nowpage) => {
         try {
                 // posts with page number and offset
-            const perPage = 12; // Number of posts per page
             const response = await fetch(
                 `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/categories?per_page=${perPage}&page=${nowpage}&_fields=id,description,slug,acf&exclude=1`
             );

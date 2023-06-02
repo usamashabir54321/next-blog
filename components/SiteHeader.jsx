@@ -2,27 +2,23 @@
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from "react";
+import useStore from '@/store';
 
 const SiteHeader = () => {
+	const { setLatestCats, setCatTotalPages, perPage } = useStore();
     const pathname = usePathname();
 	const [isMenue, setIsMenu] = useState(false);
 	useEffect(() => {
-		// setting all empty on page refreshing
-		if (typeof window !== "undefined") {
-			localStorage.setItem("lastest_cats", '');
-			localStorage.setItem("total_cat_pages", '');
-		}
 		// getting all fetch items once
 		fetchCats();
 	}, []);
 	const fetchCats = async () => {
 		try {
-			const perPage = 12; // Number of posts per page
-			const response = await fetch( `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/categories?per_page=12&page=1&_fields=id,description,slug,acf&exclude=1` );
+			const response = await fetch( `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/categories?per_page=${perPage}&page=1&_fields=id,description,slug,acf&exclude=1` );
 			const data = await response.json();
-			localStorage.setItem("lastest_cats", JSON.stringify(data));
+			setLatestCats(data);
 			const totalPosts = response.headers.get('X-WP-Total');
-			localStorage.setItem("total_cat_pages", Math.ceil(totalPosts / perPage));
+			setCatTotalPages(Math.ceil(totalPosts / perPage));
 		} catch (error) {
 			console.error('Error fetching posts:', error);
 		}
