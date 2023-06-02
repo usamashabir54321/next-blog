@@ -4,13 +4,15 @@ import { useState, useEffect } from "react";
 
 const MagazineList = () => {
     // basic variables
-    const [cats, setCats] = useState( JSON.parse(localStorage.getItem("lastest_cats")) );
+    const [cats, setCats] = useState('empty');
     const [currentPage, setCurrentPage] = useState(1);
-    const [totalPages, setTotalPages] = useState( localStorage.getItem("total_cat_pages") );
+    const [totalPages, setTotalPages] = useState(null);
     const paginationLinks = [];
     useEffect(() => {
             // calling fetching category function
 		// fetchCats(1);
+		setCats(JSON.parse(localStorage.getItem("lastest_cats")));
+		setTotalPages(localStorage.getItem("total_cat_pages"));
     }, []);
         // fetching categories function
     const fetchCats = async (nowpage) => {
