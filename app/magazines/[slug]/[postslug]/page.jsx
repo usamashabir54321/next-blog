@@ -12,15 +12,17 @@ const PostSingle = () => {
     const [user, setUser] = useState('');
     useEffect(() => {
         // current user name
-        const user = JSON.parse(localStorage.getItem('user'));
-        // if user name exists
-        if (user) {
-            // getting post data if user has buy subscription plan
-            setPostData('loading');
-            getPostData(user);
-        } else {
-            setUser('empty');
-        }
+		if (typeof window !== "undefined") {
+			const user = JSON.parse(localStorage.getItem('user'));
+			// if user name exists
+			if (user) {
+				// getting post data if user has buy subscription plan
+				setPostData('loading');
+				getPostData(user);
+			} else {
+				setUser('empty');
+			}
+		}
     }, []);
     const getPostData = async (user) => {
         const resp = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/posts?slug=${decodePostSlug}&_fields=id,title,content,acf,featured_image_url,membership&user_id=${user.ID}`);

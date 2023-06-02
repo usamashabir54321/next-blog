@@ -8,8 +8,10 @@ const SiteHeader = () => {
 	const [isMenue, setIsMenu] = useState(false);
 	useEffect(() => {
 		// setting all empty on page refreshing
-		localStorage.setItem("lastest_cats", '');
-		localStorage.setItem("total_cat_pages", '');
+		if (typeof window !== "undefined") {
+			localStorage.setItem("lastest_cats", '');
+			localStorage.setItem("total_cat_pages", '');
+		}
 		// getting all fetch items once
 		fetchCats();
 	}, []);
@@ -70,8 +72,9 @@ const SiteHeader = () => {
                                     <ul id="menu_user" className="menu_user_nav inited sf-js-enabled sf-arrows">
                                         <li className="menu_user_login">
                                             {
-												localStorage.getItem('user') ?
-												JSON.parse(localStorage.getItem('user')).display_name  : <Link href="/login" className="popup_link popup_login_link icon-user inited">لاگ ان کریں</Link>
+												typeof window !== "undefined" ?
+												localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')).display_name  : <Link href="/login" className="popup_link popup_login_link icon-user inited">لاگ ان کریں</Link>
+												: ''
 											}
                                         </li>
                                     </ul>

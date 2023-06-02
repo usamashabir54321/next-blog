@@ -25,7 +25,9 @@ const Login = () => {
 			// if user login successfully then user storage and magazines push
 			if (data == 'err') setErr(true);
 			else {
-				typeof window !== "undefined" ? localStorage.setItem('user', JSON.stringify(data.user.data)) : '';
+				if (typeof window !== "undefined") {
+					localStorage.setItem('user', JSON.stringify(data.user.data))
+				}
 				router.push('/magazines');
 			}
         })
