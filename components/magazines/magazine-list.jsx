@@ -11,17 +11,22 @@ const MagazineList = () => {
     useEffect(() => {
             // calling fetching category function
 		// fetchCats(1);
-		if (typeof window !== "undefined") {
-			const storedData = localStorage.getItem('lastest_cats');
-			if (storedData) {
-				try {
-					const parsedData = JSON.parse(storedData);
-					setCats(parsedData);
-				} catch (error) { console.error('Error parsing JSON data:', error); }
+		const timeout = setTimeout(() => {
+			// Code to be executed after the delay
+			if (typeof window !== "undefined") {
+				const storedData = localStorage.getItem('lastest_cats');
+				if (storedData) {
+					try {
+						const parsedData = JSON.parse(storedData);
+						setCats(parsedData);
+					} catch (error) { console.error('Error parsing JSON data:', error); }
+				}
+				// setCats( JSON.parse(localStorage.getItem("lastest_cats")) );
+				setTotalPages(localStorage.getItem("total_cat_pages"));
 			}
-			// setCats( JSON.parse(localStorage.getItem("lastest_cats")) );
-			setTotalPages(localStorage.getItem("total_cat_pages"));
-		}
+		}, 2000);
+		  // Clean up the timeout on component unmount
+		return () => clearTimeout(timeout);
     }, []);
         // fetching categories function
     const fetchCats = async (nowpage) => {
