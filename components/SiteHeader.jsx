@@ -5,12 +5,18 @@ import { useEffect, useState } from "react";
 import useStore from '@/store';
 
 const SiteHeader = () => {
-	const { setLatestCats, setCatTotalPages, perPage } = useStore();
+	const { setLatestCats, setCatTotalPages, perPage, setLatestPosts } = useStore();
     const pathname = usePathname();
 	const [isMenue, setIsMenu] = useState(false);
 	useEffect(() => {
 		// getting all fetch items once
-		fetchCats();
+		const timeout = setTimeout(() => {
+				// top 12 latest magazines
+			fetchCats();
+				// top 12 latest posts
+			fetchPosts();
+		}, 2000);
+		return () => { clearTimeout(timeout); };
 	}, []);
 	const fetchCats = async () => {
 		try {
@@ -19,9 +25,14 @@ const SiteHeader = () => {
 			setLatestCats(data);
 			const totalPosts = response.headers.get('X-WP-Total');
 			setCatTotalPages(Math.ceil(totalPosts / perPage));
-		} catch (error) {
-			console.error('Error fetching posts:', error);
-		}
+		} catch (error) { console.error('Error fetching posts:', error); }
+	};
+	const fetchPosts = async () => {
+		try {
+			const response = await fetch( `${process.env.NEXT_PUBLIC_BACKEND_URL}/wp-json/wp/v2/posts?_fields=title,slug,featured_image_url&per_page=${perPage}` );
+			const data = await response.json();
+			setLatestPosts(data);
+		} catch (error) { console.error('Error fetching posts:', error); }
 	};
     return (
         <>

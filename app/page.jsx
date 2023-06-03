@@ -1,6 +1,6 @@
 import "@/styles/home-page.css";
 import MagazineList from "@/components/magazines/magazine-list";
-import GalleryList from "@/components/gallery/GalleryList";
+import LatestPostList from "@/components/posts/LatestPostList";
 
 export const metadata = {
     title: 'Home Page',
@@ -93,8 +93,8 @@ const Home = () => {
                             </div>
                             {/* magazine list */}
                             <MagazineList />
-                            {/* gallery list */}
-                            <GalleryList />
+                            {/* latest posts list */}
+                            <LatestPostList />
                             {/* video section */}
                             <div className="vc_row wpb_row vc_row-fluid">
                                 <div className="wpb_column vc_column_container vc_col-sm-12">

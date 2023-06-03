@@ -7,6 +7,8 @@ const useStore = create(set => ({
 	perPage: 12,
 	setLatestCats: ( array ) => set(state => ({ latestCats: array })),
 	setCatTotalPages: ( nums ) => set(state => ({ catTotalPages: nums })),
+	latestPosts: [],
+	setLatestPosts: ( array ) => set(state => ({ latestPosts: array })),
 }));
 
 export default useStore;
